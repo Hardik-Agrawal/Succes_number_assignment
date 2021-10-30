@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import {AppBar, Grid, TextField, Checkbox} from '@material-ui/core';
+import {Grid, TextField, Checkbox} from '@material-ui/core';
 import Image from 'material-ui-image';
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 
 export class CustomerInfo extends Component  {
     
 render(){
-
-  let handleChange = input => e => {
-    this.setState({ [input]: e.target.value });
-  };
 
   return (
       
@@ -18,11 +14,11 @@ render(){
       <div style = {{marginLeft: 50, marginRight:50, marginTop: 20}} className = "container" >
         <Grid container spacing = {5}>
           <Grid item xs = {4} md = {3} style = {{ gridRow: 1/3, }}> 
-            <Image src = '../images/logo512.png'/>
+            <Image src = './images/logo512.jpg' alt = "Image"/>
           </Grid>
 
           <Grid item md = {9}>
-            <Grid container spacing = {5,4}>
+            <Grid container spacing = {5}>
               <Grid item xs = {7} md = {4}> 
                 <TextField                  
                   placeholder="Enter Your First Name"
